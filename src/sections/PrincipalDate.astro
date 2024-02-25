@@ -1,0 +1,72 @@
+<section
+  class="mt-32 mx-auto flex flex-col justify-center items-center text-center"
+>
+  <h2
+    class="leading-tigh animate-fade-in-up animate-delay-300 text-primary text-center uppercase text-5xl font-semibold"
+  >
+    4 de Marzo <span aria-hidden class="hidden md:inline"> &bull;</span>
+    <br aria-hidden class="block md:hidden" />
+    <span>
+      <script is:inline>
+
+        const END_DATE = 1709575200000;
+        const d = new Date(END_DATE);
+
+        const date = d.toLocaleTimeString("es-ES", {
+          hour: "2-digit",
+          minute: "2-digit",
+        });
+        //get Current Timezone
+        const tzOffset = d.getTimezoneOffset() / 60;
+        const TZ_DICTIONARY = {
+          "-12": "Utc/GMT+12",
+          "-11": "Utc/GMT+11",
+          "-10": "Utc/GMT+10",
+          "-9": "Utc/GMT+9",
+          "-8": "Utc/GMT+8",
+          "-7": "Utc/GMT+7",
+          "-6": "Utc/GMT+6",
+          "-5": "Utc/GMT+5",
+          "-4": "Utc/GMT+4",
+          "-3": "Utc/GMT+3",
+          "-2": "Utc/GMT+2",
+          "-1": "Utc/GMT+1",
+          "0": "Utc/GMT",
+          "1": "Utc/GMT-1",
+          "2": "Utc/GMT-2",
+          "3": "Utc/GMT-3",
+          "4": "Utc/GMT-4",
+          "5": "Utc/GMT-5",
+          "6": "Utc/GMT-6",
+          "7": "Utc/GMT-7",
+          "8": "Utc/GMT-8",
+          "9": "Utc/GMT-9",
+          "10": "Utc/GMT-10",
+          "11": "Utc/GMT-11",
+          "12": "Utc/GMT-12",
+        };
+
+        const selfScript = document.currentScript;
+        selfScript.parentNode.innerHTML = `${date}H ${TZ_DICTIONARY[tzOffset]}`;
+      </script>
+    </span>
+  </h2>
+
+  <h3 class="uppercase text-2xl font-medium flex flex-col max-w-sm mt-6 text-primary">
+    <span>Evento de Presentación</span>
+    <span>Teatro Victoria (Barcelona)</span>
+  </h3>
+
+  <a
+    class={`
+            border-primary border-2 text-primary
+            py-1 px-4 mt-8 uppercase font-medium text-lg
+            hover:bg-primary hover:text-secondary hover:scale-125 transition inline-block
+        `}
+    href="#"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Entradas Agotadas
+  </a>
+</section>
